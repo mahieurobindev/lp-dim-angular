@@ -1,1 +1,1 @@
-# lp-dim-react
+# lp-dim-angular
