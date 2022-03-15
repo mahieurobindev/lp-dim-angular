@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { HttpClientModule } from '@angular/common/http';
 import { StudentRoutingModule } from './student-routing.module';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
 
@@ -11,7 +11,8 @@ import { NotfoundComponent } from './pages/notfound/notfound.component';
   ],
   imports: [
     CommonModule,
-    StudentRoutingModule
+    StudentRoutingModule,
+    HttpClientModule
   ]
 })
 export class StudentModule { }
