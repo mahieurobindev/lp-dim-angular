@@ -6,15 +6,12 @@ import { StudentService } from '../../services/student.service';
 @Component({
   selector: 'app-student-list',
   templateUrl: './student-list.component.html',
-  styleUrls: ['./student-list.component.scss'],
-  providers:[StudentService]
+  styleUrls: ['./student-list.component.scss']
 })
 export class StudentListComponent implements OnInit {
-  students$: Observable<Student[]>;
-  displayedColumns = ['id', 'firstName', 'lastName', 'class']
 
   constructor(private _studentService: StudentService) { }
-
+  students$: Observable<Student[]>;
   ngOnInit(): void {
     this.students$ = this._studentService.get();
   }
