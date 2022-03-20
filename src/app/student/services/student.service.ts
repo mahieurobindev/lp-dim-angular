@@ -6,6 +6,9 @@ import { environment } from 'src/environments/environment';
 
 @Injectable()
 export class StudentService {
+    getAllStudent(): Observable<Students[]> {
+      throw new Error('Method not implemented.');
+    }
     private readonly studentPath: string = "/students";
 
     constructor(private _http: HttpClient) { }
