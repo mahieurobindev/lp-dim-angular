@@ -1,18 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Students } from 'src/app/core/models/student';
+import { Student } from 'src/app/core/models/student';
 import { StudentService } from '../../services/student.service';
 
 @Component({
   selector: 'app-student-list',
   templateUrl: './student-list.component.html',
-  styleUrls: ['./student-list.component.scss'],
-  providers: [StudentService],
+  styleUrls: ['./student-list.component.scss']
 })
 export class StudentListComponent implements OnInit {
-  constructor(private _studentService: StudentService) {}
-  students$: Observable<Students[]>;
+  students$: Observable<Student[]>;
+
+  constructor(private _studentService: StudentService) { }
+
   ngOnInit(): void {
-    this.students$ = this._studentService.getAllStudent();
+    this.students$ = this._studentService.get();
   }
+
 }

@@ -1,23 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SharedModule } from '../shared/shared.module';
-import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 
 
 @NgModule({
-  declarations: [
-    HeaderComponent,
-    FooterComponent
-  ],
+  declarations: [FooterComponent, HeaderComponent, NotFoundComponent],
   imports: [
-    CommonModule,
-    SharedModule
+    CommonModule, SharedModule, 
   ],
   exports: [
-    HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    HeaderComponent
   ]
 })
 export class CoreModule { }

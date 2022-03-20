@@ -1,28 +1,25 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CoreModule } from './core/core.module';
-import { SharedModule } from './shared/shared.module';
-import { NotfoundComponent } from './student/pages/notfound/notfound.component';
+import { NotFoundComponent } from './core/components/not-found/not-found.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: "",
     redirectTo: 'students',
     pathMatch: 'full',
   },
   {
     path: 'students',
-    loadChildren: () =>
-      import('./student/student.module').then((m) => m.StudentModule),
+    loadChildren: () => import('./student/student.module').then(m => m.StudentModule),
   },
   {
-    path: '**',
-    component: NotfoundComponent
+    path: "**",
+    component: NotFoundComponent,
   }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule, CoreModule, SharedModule],
+  exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
