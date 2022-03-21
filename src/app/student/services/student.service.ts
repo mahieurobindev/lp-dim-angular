@@ -6,6 +6,9 @@ import { environment } from 'src/environments/environment';
 
 @Injectable()
 export class StudentService {
+  create(student: Student) {
+    throw new Error('Method not implemented.');
+  }
 
   private readonly studentPath: string = "/student"
 
