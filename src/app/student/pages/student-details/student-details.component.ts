@@ -32,7 +32,7 @@ export class StudentDetailsComponent implements OnInit {
   }
 
   fetchData(id: number) {
-    this.student$ = this._studentService.get(id);
+    this.student$ = this._studentService.getById(id);
   }
 
   updateStudent(student: Student) {
