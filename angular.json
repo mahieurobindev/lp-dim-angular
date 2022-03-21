@@ -108,6 +108,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "lp-dim-app:build:production",
+            "firebaseProject": "lp-dim-app-rm",
+            "firebaseHostingSite": "lp-dim-app-rm"
+          }
         }
       }
     }
