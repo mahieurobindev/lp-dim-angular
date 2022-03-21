@@ -6,7 +6,7 @@ import { max, Observable } from 'rxjs';
 
 @Injectable()
 export class StudentService {
-  private readonly studentPath: string = '/students';
+  private readonly studentPath: string = '/student';
 
   constructor(private _http: HttpClient) {}
 
